@@ -31,6 +31,6 @@ else
 fi
 
 # Render (-H disable_float.tex fix image placement)
-pandoc -H disable_float.tex --table-of-contents "${INPUT}" -o "${OUTPUT}"
+pandoc -H disable_float.tex --table-of-contents --number-sections --shift-heading-level-by -1 "${INPUT}" -o "${OUTPUT}"
 
 echo "Rendered ${INPUT} to ${OUTPUT}"

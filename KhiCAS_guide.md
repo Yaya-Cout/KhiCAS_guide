@@ -1,4 +1,8 @@
-# Guide d'utilisation de KhiCAS
+---
+title: Guide d'utilisation de KhiCAS
+author: FmOOmf et Yaya-Cout
+date: 29 novembre 2022
+---
 
 ## Clarification de la terminologie
 
@@ -300,6 +304,6 @@ Une fois que vous avez découvert KhiCAS, il peut être difficile de comprendre 
 
 Ce guide à été rendu possible grâce à la participation de :
 
-- fm00mf pour le texte original et les captures d'écran
+- fmOOmf pour le texte original et les captures d'écran
 - Yaya-Cout pour la réécriture Markdown et PDF
 - Bernard Parisse pour avoir écrit KhiCAS et sa [documentation](https://www-fourier.univ-grenoble-alpes.fr/~parisse/numworks/khicasnw.html), malgré sa taille immense diminuant la facilité de compréhension du texte
