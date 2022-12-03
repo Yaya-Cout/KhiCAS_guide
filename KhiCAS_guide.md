@@ -1,6 +1,6 @@
 ---
 title: Guide d'utilisation de KhiCAS
-author: FmOOmf et Yaya-Cout
+author: fmOOmf et Yaya-Cout
 date: 29 novembre 2022
 ---
 
@@ -20,9 +20,9 @@ Pour reconnaître le firmware installé sur votre calculatrice, regardez le text
 
 - Si le texte est "applications", vous utilisez sûrement Epsilon, le firmware officiel de la calculatrice NumWorks.
 
-- Si le texte est "Omega", vous utilisez sûrement le firmware tier Omega, vous permettant d'utiliser KhiCAS de manière plus complète que sur Epsilon
+- Si le texte est "Omega", vous utilisez sûrement le firmware tiers Omega, vous permettant d'utiliser KhiCAS de manière plus complète que sur Epsilon
 
-- Si le texte est "Upsilon", vous utilisez sûrement le firmware tier Upsilon, basé sur Omega, vous permettant d'utiliser des version plus récentes que celles disponibles sur Omega, encore plus puissantes !
+- Si le texte est "Upsilon", vous utilisez sûrement le firmware tiers Upsilon, basé sur Omega, vous permettant d'utiliser des version plus récentes que celles disponibles sur Omega, encore plus puissantes !
 
 ### Installation de KhiCAS sur Epsilon
 
@@ -43,7 +43,7 @@ Sur Upsilon, vous devez passer par le bootloader pour installer KhiCAS. Cela eff
 4. Appuyez sur 1 (Flash Slots)
 5. La calculatrice affiche `Waiting for Slots...`
 6. Rendez vous sur [ce site](https://upsilonnumworks.github.io/Upsilon-External/).
-7. Ajoutez Omega puis cliquez sur installer.
+7. Ajoutez KhiCAS puis cliquez sur installer.
 8. Cliquez sur installer et sélectionnez votre calculatrice (Upsilon Calculator)
 9. Appuyez sur RESET
 10. Démarrez votre calculatrice normalement
@@ -56,9 +56,9 @@ Lors du premier lancement de KhiCAS, on arrive sur des choix de langue et d'inte
 
 Taper OK et OK pour être en français et en langage xCAS (calcul formel).
 
-![Sélection de la langue](images/1.Lancement_Q1_langue.png)
+![Sélection de la langue](images/01.Lancement_Q1_langue.png)
 
-![Sélection de l'interpréteur](images/2.Lancement_Q2_Interpreter.png)
+![Sélection de l'interpréteur](images/02.Lancement_Q2_Interpreter.png)
 
 ## Shell
 
@@ -66,11 +66,11 @@ Une fois la configuration terminée, on arrive sur la fenêtre du shell. Dans ce
 
 On observe qu'il y a des menus en bas. Pour y accéder, il suffit de taper shift + le nombre correspondant (shift + 1, shift + 2, shift + 3…)
 
-![Fenêtre du shell](images/3.Fenetre_shell.png)
+![Fenêtre du shell](images/03.Fenetre_shell.png)
 
 Pour commencer, nous allons taper une expression mathématique : $\left(3 x+1\right)^{5}$
 
-![Entrée de l'expression](images/4.Shell_Expression.png)
+![Entrée de l'expression](images/04.Shell_Expression.png)
 
 À ce moment-là, nous pouvons
 
@@ -86,7 +86,7 @@ La vue 2D se reconnaît à sa barre de menu verte.
 
 Pour revenir dans le shell, il suffit de cliquer sur OK ou retour, mais nous allons d'abord explorer cette vue.
 
-![Fenêtre 2D](images/5.Fenetre_2D.png)
+![Fenêtre 2D](images/05.Fenetre_2D.png)
 
 On remarque qu'une partie de l'expression seulement est sélectionnée (fond gris). Il faut savoir que les fonctions qui vont être utilisées ne vont s'appliquer qu'à la sélection
 
@@ -102,7 +102,7 @@ Pour naviguer dans la vue 2D, il y a quelque commandes simples :
 
 Nous appuyons donc sur flèche haut pour sélectionner l'ensemble de l'expression.
 
-![Sélection dans la vue 2D](images/6.2D_selection.png)
+![Sélection dans la vue 2D](images/06.2D_selection.png)
 
 ### Dériver une expression depuis la vue 2D
 
@@ -112,21 +112,26 @@ On sélectionne 1 pour dériver l'expression, mais la touche 2 est aussi possibl
 
 KhiCAS insère automatiquement la commande. On observe que l'exposant 5 s'est transformé en `**5`. C'est parce que KhiCAS a modifié l'expression.
 
-![Expression après avoir sélectionné la fonction de dérivation](images/7.2D_diff_choix.png)
+![Expression après avoir sélectionné la fonction de dérivation](images/07.2D_diff_choix.png)
 
 Pour avoir le résultat, on tape sur la touche EXE, qui applique l'expression, sans quitter la vue 2D. Nous aurions aussi pu utiliser la touche OK, mais nous aurions quitté la vue 2D.
 
-![Résultat du calcul](images/8.2D_diff_res.png)
+![Résultat du calcul](images/08.2D_diff_res.png)
 
-La dérivée de $\left(3 x+1\right)^{5}$ est donc $\left(15 \left(3 x+1\right)\right)^{4}$
+La dérivée de $\left(3 x+1\right)^{5}$ est donc $15 \left(3 x+1\right)^{4}$
 
 ### Développer une expression depuis la vue 2D
 
-Pour obtenir la forme factorisée de cette dérivée, nous pouvons utiliser la commande `simplify`, depuis le menu 1. Nous ouvrons donc le menu 1.
+Pour obtenir la forme factorisée de cette dérivée, nous pouvons utiliser la commande `expand` ou la commande `simplify`, depuis le menu 1. 
+- La commande `expand` développe.
+- La commande `simplify` développe, puis simplifie (elle regroupe les x de même exposant).
 
-![Menu 1](images/9.2D_simplify_menu.png)
+Nous choisissons d'utiliser la commande `simplify`.
+Nous ouvrons donc le menu 1.
 
-Nous appuyons donc sur la touche 1, pour simplifier.
+![Menu 1](images/09.2D_simplify_menu.png)
+
+Nous appuyons donc sur la touche 1, pour développer et simplifier.
 
 ![Résultat de la simplification](images/10.2D_simplify_gd.png)
 
@@ -218,8 +223,10 @@ Nous décidons d'utiliser la fonction `tabvar` depuis le menu "Analyse" de la bo
 
 La fonction est copiée dans le shell.
 
-À ce moment là, nous pouvons faire plusieurs actions
+À ce moment là, nous pouvons faire plusieurs actions :
 
+- Compléter à la main la suite de la commande : les propositions de complétion sont effacées et remplacées par la frappe
+- Appuyer sur la touche flèche HAUT pour aller chercher une expression dans la fenêtre shell, et la rajouter avec la touche OK : les propositions de complétion sont remplacées par cette sélection
 - Appuyer sur la touche Back, effaçant ainsi les propositions de complétions
 - Appuyer sur la touche Ans pour sélectionner le premier exemple d'utilisation
 - Appuyer sur la flèche bas pour ouvrir l'aide intégrée.
@@ -228,7 +235,7 @@ La fonction est copiée dans le shell.
 
 L'aide intégré détaille rapidement l'utilité de la fonction, sa syntaxe, les raccourcis éventuels, les fonctions en lien et les exemples d'utilisation.
 
-Nous ne voulons pas d'aide sur la fonction, nous appuyons donc sur Back pour masquer cela.
+Nous ne voulons pas d'aide sur la fonction, et nous décidons d'appuyer sur Back pour effacer les propositions de complétion.
 
 ![Affichage avoir cliqué sur Back](images/21.Shell_tabvar_toucheRetour.png)
 
@@ -248,11 +255,11 @@ Il ne nous reste qu'a valider avec la touche OK ou EXE. Le tableau de variation 
 
 C'est un peu difficile à lire, mais cela nous permet de vérifier nos calculs.
 
-On voit que la dérivée s'annule en $-\frac{1}{3}$, et qu'elle est positive sur R. Il y a un point d'inflexion en $-\frac{1}{3}$.
-On voit donc que f(x) est croissante (inc = increasing) sur R. Au point d'inflexion ($x=-\frac{1}{3}$), $f\left(x\right)$ s'annule.
-Les limites de f sont $-\infty$ pour $x=\mathrm{i}$, et $+\infty$ pour $x=+\infty$.
+On voit que la dérivée (ligne y') s'annule en $-\frac{1}{3}$, et qu'elle est positive sur R. Il y a un point d'inflexion en $-\frac{1}{3}$.
+On voit donc que f(x) (ligne y) est croissante (inc = increasing) sur R. Au point d'inflexion ($x=-\frac{1}{3}$), $f\left(x\right)$ s'annule.
+Les limites de f sont $-\infty$ pour $x=-\infty$, et $+\infty$ pour $x=+\infty$.
 
-La dernière ligne est la dérivée seconde.
+La dernière ligne est la dérivée seconde : ligne (y')'.
 
 - Elle est négative jusqu'à $-\frac{1}{3}$, donc f est concave sur cet intervalle (symbole ^). Cela veut dire qu'elle tourne dans le sens rétrograde (aiguilles d'une montre)
 
