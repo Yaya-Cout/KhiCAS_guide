@@ -1,20 +1,20 @@
 ---
 title: Guide d'utilisation de KhiCAS
 author: fmOOmf et Yaya-Cout
-date: 29 novembre 2022
+date: 09 décembre 2022
 ---
 
-## Clarification de la terminologie
+# Clarification de la terminologie
 
 - Retour ou Back signifie la touche retour à côté du bouton OK. Nous utiliserons la dénomination "touche effacer" ou similaire pour parler de la touche pour effacer des caractères, située à côté de la boite à outils.
 
 - Le mot firmware est utilisé pour signifier "Système d'exploitation pour la calculatrice"
 
-## Installation
+# Installation
 
 La méthode d'installation de KhiCAS dépend du firmware installé sur votre calculatrice. Si vous ne savez pas, lisez le paragraphe ci-dessous
 
-### Reconnaître le firmware installé
+## Reconnaître le firmware installé
 
 Pour reconnaître le firmware installé sur votre calculatrice, regardez le texte écrit dans la barre de titre de votre calculatrice
 
@@ -22,18 +22,18 @@ Pour reconnaître le firmware installé sur votre calculatrice, regardez le text
 
 - Si le texte est "Omega", vous utilisez sûrement le firmware tiers Omega, vous permettant d'utiliser KhiCAS de manière plus complète que sur Epsilon
 
-- Si le texte est "Upsilon", vous utilisez sûrement le firmware tiers Upsilon, basé sur Omega, vous permettant d'utiliser des version plus récentes que celles disponibles sur Omega, encore plus puissantes !
+- Si le texte est "Upsilon", vous utilisez sûrement le firmware tiers Upsilon, basé sur Omega, vous permettant d'utiliser des versions plus récentes que celles disponibles sur Omega, encore plus puissantes !
 
-### Installation de KhiCAS sur Epsilon
+## Installation de KhiCAS sur Epsilon
 
 Ce guide n'est pas prévu pour Epsilon, mais vous pouvez
 l'installer depuis [ce site](https://www.nwagyu.com/apps/khicas/)
 
-### Installation de KhiCAS sur Omega
+## Installation de KhiCAS sur Omega
 
 Pour installer KhiCAS sur Omega, rendez vous sur [ce site](https://external.getomega.dev/), sélectionnez Omega puis cliquez sur installer. Votre slot B sera effacé
 
-### Installation de KhiCAS sur Upsilon
+## Installation de KhiCAS sur Upsilon
 
 Sur Upsilon, vous devez passer par le bootloader pour installer KhiCAS. Cela effacera votre slot B.
 
@@ -48,7 +48,7 @@ Sur Upsilon, vous devez passer par le bootloader pour installer KhiCAS. Cela eff
 9. Appuyez sur RESET
 10. Démarrez votre calculatrice normalement
 
-## Premier lancement
+# Premier lancement
 
 KhiCAS se trouve en dernière position du menu Home, après les paramètres. Pour le lancer, appuyez sur OK, comme pour n'importe quelle application.
 
@@ -60,7 +60,7 @@ Taper OK et OK pour être en français et en langage xCAS (calcul formel).
 
 ![Sélection de l'interpréteur](images/02.Lancement_Q2_Interpreter.png)
 
-## Shell
+# Shell
 
 Une fois la configuration terminée, on arrive sur la fenêtre du shell. Dans cette fenêtre, on peut taper des commandes, des expressions mathématiques, des calculs simples… Si vous êtes en interpréteur xCAS, vous aurez un bandeau rose en bas. Si vous avez choisi MicroPython, il sera jaune
 
@@ -80,7 +80,7 @@ Pour commencer, nous allons taper une expression mathématique : $\left(3 x+1\ri
 
 Nous allons utiliser shift + 5 et explorer la vue 2D.
 
-## Vue 2D
+# Vue 2D
 
 La vue 2D se reconnaît à sa barre de menu verte.
 
@@ -104,7 +104,7 @@ Nous appuyons donc sur flèche haut pour sélectionner l'ensemble de l'expressio
 
 ![Sélection dans la vue 2D](images/06.2D_selection.png)
 
-### Dériver une expression depuis la vue 2D
+## Dériver une expression depuis la vue 2D
 
 Un appui sur Shift + 2 nous ouvre le menu de calcul
 
@@ -118,12 +118,14 @@ Pour avoir le résultat, on tape sur la touche EXE, qui applique l'expression, s
 
 ![Résultat du calcul](images/08.2D_diff_res.png)
 
-La dérivée de $\left(3 x+1\right)^{5}$ est donc $15 \left(3 x+1\right)^{4}$
+La dérivée de $\left(3 x+1\right)^{5}$ est donc $15* \left(3 x+1\right)^{4}$
 
-### Développer une expression depuis la vue 2D
+## Développer une expression depuis la vue 2D
 
-Pour obtenir la forme factorisée de cette dérivée, nous pouvons utiliser la commande `expand` ou la commande `simplify`, depuis le menu 1. 
-- La commande `expand` développe.
+Pour obtenir la forme factorisée de cette dérivée, nous pouvons utiliser la commande `texpand` ou la commande `simplify`, depuis le menu 1. 
+
+- La commande `texpand` développe (en vérité c'est un peu plus subtil : regardez l'aide)
+
 - La commande `simplify` développe, puis simplifie (elle regroupe les x de même exposant).
 
 Nous choisissons d'utiliser la commande `simplify`.
@@ -135,7 +137,7 @@ Nous appuyons donc sur la touche 1, pour développer et simplifier.
 
 ![Résultat de la simplification](images/10.2D_simplify_gd.png)
 
-### Cas du texte trop grand pour rentrer sur l'écran
+## Cas du texte trop grand pour rentrer sur l'écran
 
 Malheureusement, l'expression est trop grande pour rentrer sur l'écran. Nous avons deux solutions dans ce cas-là :
 
@@ -147,7 +149,7 @@ Les deux solutions sont combinables. Nous choisissons de mettre la petite police
 
 ![Résultat en petite police](images/11.2D_simplify_petit.png)
 
-### Factoriser une expression depuis la vue 2D
+## Factoriser une expression depuis la vue 2D
 
 Nous souhaitons maintenant refactoriser cette expression.
 
@@ -167,7 +169,7 @@ Par contre, le texte reste écrit en petit. Pour revenir à la vue classique, no
 
 ![Résultat de la factorisation en petite police](images/15.2D_factor_res_gd.png)
 
-### Revenir au shell
+## Revenir au shell
 
 Pour revenir au shell, il suffit d'appuyer sur la touche OK, pour sauvegarder l'expression.
 
@@ -179,7 +181,7 @@ Voilà une petite introduction aux grandes capacités de KhiCAS.
 
 > C'est un petit pas pour l'homme, mais un grand pas pour l'humanité.
 
-## La boite à outils
+# La boite à outils
 
 La boite à outils contient toutes les commandes de KhiCAS, il ne faut pas hésiter à se perdre dans ses menus. Vous y découvrirez des fonctions diverses et variées. Pour y accéder, il faut appuyer sur la touche toolbox, entre la touche d'effacement et la touche var.
 
@@ -211,7 +213,7 @@ Dans le menu analyse, nous trouvons notamment les fonctions :
 
 Voilà tout, pour le moment, dans cette breve introduction des incroyables fonctionnalités de KhiCAS.
 
-### Contrôles de la boite à outils
+## Contrôles de la boite à outils
 
 - La touche OK insère l'expression sélectionnée
 
@@ -267,7 +269,7 @@ La dernière ligne est la dérivée seconde : ligne (y')'.
 
 Bon, il ne faut pas s'attendre à quelque chose de très lisible sur les fonctions compliquées, mais ça valide les calculs qu'on fait "à la main", ce qui est dans la philosophie de KhiCAS
 
-## Éditeur de texte
+# Éditeur de texte
 
 Dans la fenêtre du shell, il est également possible d'aller dans la fenêtre de script. Pour taper cela, il faut taper sur la touche Back.
 
@@ -279,7 +281,7 @@ Nous basculons donc sur la fenêtre d'édition, avec des menus gris. Un début d
 
 - Pour revenir au shell, on utiliser la touche Back.
 
-## Menu principal
+# Menu principal
 
 Pour y accéder, il suffit d'appuyer sur la touche Home en étant dans le shell.
 
@@ -303,14 +305,14 @@ Il permet de faire plusieurs choses :
 
 - De quitter KhiCAS
 
-## Quitter KhiCAS
+# Quitter KhiCAS
 
 Une fois que vous avez découvert KhiCAS, il peut être difficile de comprendre comment en sortir. Pour cela, c'est tout simple : il suffit de cliquer deux fois sur Home depuis le shell (appuyer plus de fois sur Home permet de quitter depuis la plupart des autres écrans)
 
-## Crédits
+# Crédits
 
 Ce guide à été rendu possible grâce à la participation de :
 
 - fmOOmf pour le texte original et les captures d'écran
-- Yaya-Cout pour la réécriture Markdown et PDF
+- Yaya-Cout pour la réécriture Markdown et PDF, pour le simulateur KhiCAS ayant rendu possible toutes les copies d'écran, et pour de nombreuses astuces d'utilisation.
 - Bernard Parisse pour avoir écrit KhiCAS et sa [documentation](https://www-fourier.univ-grenoble-alpes.fr/~parisse/numworks/khicasnw.html), malgré sa taille immense diminuant la facilité de compréhension du texte
